@@ -1,0 +1,20 @@
+# Arquivo .gitignore para o projeto Lunar Lander Deep RL
+
+# Caches do Python e do Pygame
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.pygame_window_cache/
+
+# Arquivos temporários e checkpoints do Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Logs locais, storages ocultos e IDEs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
