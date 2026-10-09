@@ -1,73 +1,73 @@
 # 🚀 Lunar Lander v3 - Deep Reinforcement Learning Benchmark
 
-Este repositório apresenta um projeto completo de engenharia e modelagem em **Aprendizado por Reforço Profundo (Deep RL)** aplicado ao controle físico contínuo do ambiente **Lunar Lander v3** (Gymnasium). 
+This repository presents a comprehensive engineering and modeling project in **Deep Reinforcement Learning (Deep RL)** applied to the continuous physical control of the **Lunar Lander v3** environment (Gymnasium).
 
-O objetivo principal é treinar e auditar agentes inteligentes capazes de ler telemetrias vetoriais de uma espaçonave e acionar propulsores de forma coordenada para realizar um pouso seguro na plataforma lunar.
-
----
-
-## 💡 Diferenciais Técnicos do Pipeline
-
-Ao contrário de abordagens puramente teóricas ou acadêmicas, este projeto foi desenhado sob boas práticas de engenharia de software e performance de IA:
-
-* **Arquitetura 100% In-Memory (RAM):** O ecossistema de treinamento foi desacoplado de gravações físicas em disco. Ambientes, buffers de treino, logs e histórico de curvas de convergência são processados e mantidos estritamente na memória volátil, mantendo o ambiente de desenvolvimento limpo.
-* **Estabilização de Gradiente:** Utilização de ambientes monitorados e encapsulados com wrappers de **Normalização Adaptativa de Recompensas (`VecNormalize`)** para mitigar o impacto ruidoso de spikes de pontuação (+100 por pouso / -100 por colisão).
-* **Competição de Algoritmos:** Avaliação comparativa simultânea entre três grandes famílias lógicas do framework `Stable-Baselines3`: **DQN** (baseado em valor), **PPO** (baseado em gradiente de política) e **A2C** (arquitetura síncrona de Ator-Crítico).
-* **Auditoria por Entropia de Shannon:** Implementação de diagnóstico matemático fina para medir a plasticidade comportamental das redes neurais após o treino, blindando o repositório contra o fenômeno de *Policy Collapse* (colapso de política onde o agente fica cego e repete o mesmo comando).
+The primary objective is to train and audit intelligent agents capable of reading vector telemetries from a spacecraft and firing thrusters in a coordinated manner to execute a safe landing on the lunar pad.
 
 ---
 
-## 📊 Quadro Quantitativo de Resultados (300k Passos)
+## 💡 Technical Highlights of the Pipeline
 
-Após um orçamento controlado de **300.000 timesteps de interação**, os modelos foram submetidos a testes determinísticos sob sementes estocásticas independentes. O algoritmo **PPO** consagrou-se o campeão absoluto:
+Unlike purely theoretical or academic approaches, this project was designed under software engineering and AI performance best practices:
 
-| Algoritmo | Recompensa Média | Desvio Padrão (Estabilidade) | Taxa de Pouso Seguro (Sucesso) | Entropia de Shannon | Status de Saúde da Política |
+* **100% In-Memory Architecture (RAM):** The training ecosystem has been decoupled from physical disk writes. Environments, training buffers, logs, and convergence curve history are processed and held strictly in volatile memory, keeping the development workspace clean.
+* **Gradient Stabilization:** Utilization of monitored and encapsulated environments wrapped with **Adaptive Reward Normalization (`VecNormalize`)** to mitigate the noisy impact of score spikes (+100 for landing / -100 for crashing).
+* **Algorithm Competition:** A simultaneous comparative evaluation among three major logical families from the `Stable-Baselines3` framework: **DQN** (value-based), **PPO** (policy gradient-based), and **A2C** (synchronous Actor-Critic architecture).
+* **Auditing via Shannon Entropy:** Implementation of fine-grained mathematical diagnostics to measure the behavioral plasticity of neural networks post-training, shielding the repository against the *Policy Collapse* phenomenon (where the agent becomes blind and repeatedly issues the same command).
+
+---
+
+## 📊 Quantitative Results Summary (300k Steps)
+
+Following a controlled budget of **300,000 interaction timesteps**, the models were subjected to deterministic testing under independent stochastic seeds. The **PPO** algorithm emerged as the absolute champion:
+
+| Algorithm | Mean Reward | Standard Deviation (Stability) | Safe Landing Rate (Success) | Shannon Entropy | Policy Health Status |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 🏆 **PPO** | **+184.20** | **14.50** | **93.3%** | **1.91 bits** (Máx: 2.00) | ✅ Saudável e Dinâmica |
-| 🥈 **A2C** | -42.10 | 38.60 | 15.0% | 1.10 bits | ⚠️ Degradação Tardia |
-| 🥉 **DQN** | -125.40 | 45.10 | 0.0% | 0.32 bits | 🚨 Alerta de Colapso |
+| 🏆 **PPO** | **+184.20** | **14.50** | **93.3%** | **1.91 bits** (Max: 2.00) | ✅ Healthy & Dynamic |
+| 🥈 **A2C** | -42.10 | 38.60 | 15.0% | 1.10 bits | ⚠️ Late Degradation |
+| 🥉 **DQN** | -125.40 | 45.10 | 0.0% | 0.32 bits | 🚨 Collapse Alert |
 
-### 🧠 Perfil de Acionamento dos Motores (Modelo Campeão PPO):
-* **NADA (Flutuação Inercial):** 25.5%
-* **MOT_ESQ (Correção Lateral Esquerda):** 17.6%
-* **MOT_DIR (Correção Lateral Direita):** 17.3%
-* **MOT_PRINC (Propulsão Vertical de Frenagem):** 39.7%
+### 🧠 Engine Firing Profile (Champion PPO Model):
+* **IDLE (Inertial Drifting):** 25.5%
+* **LEFT_THRUSTER (Left Lateral Correction):** 17.6%
+* **RIGHT_THRUSTER (Right Lateral Correction):** 17.3%
+* **MAIN_THRUSTER (Vertical Braking Propulsion):** 39.7%
 
 ---
 
-## 🛠️ Requisitos e Instalação
+## 🛠️ Requirements and Installation
 
-O projeto utiliza exclusivamente ferramentas de código aberto (Licença MIT), eliminando dependências de ROMs proprietárias ou emuladores comerciais de terceiros. 
+The project exclusively utilizes open-source tools (MIT License), eliminating any dependencies on proprietary ROMs or third-party commercial emulators.
 
-1. Certifique-se de ter o Python 3.10+ instalado.
-2. Clone o repositório e instale as dependências contidas no arquivo `requirements.txt`:
+1. Ensure you have Python 3.10+ installed.
+2. Clone the repository and install the dependencies listed in the `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Componentes principais do arquivo `requirements.txt`:
-* `gymnasium[box2d]` (Engine física de simulação contínua)
-* `stable-baselines3` (Framework de algoritmos de RL)
-* `torch` (Motor de processamento de Tensores/Redes Neurais)
-* `tqdm`, `pandas`, `numpy`, `matplotlib`, `pygame` (Suporte, logs e renderização)
+### Core Components of `requirements.txt`:
+* `gymnasium[box2d]` (Physical engine for continuous simulation)
+* `stable-baselines3` (RL algorithms framework)
+* `torch` (Tensor/Neural Network processing engine)
+* `tqdm`, `pandas`, `numpy`, `matplotlib`, `pygame` (Support, logging, and rendering)
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 How to Run the Project
 
-O código foi estruturado de forma linear e embutida em um único Jupyter Notebook (`lunar_lander_deep_rl.ipynb`), dividido em 7 etapas sequenciais:
+The code has been structured linearly and embedded within a single Jupyter Notebook (`lunar_lander_deep_rl.ipynb`), broken down into 7 sequential steps:
 
-1. **Célula 1 - Setup:** Inicialização das bibliotecas e mapeamento de hardware.
-2. **Célula 2 - O "Antes":** Demonstração inline da espaçonave caindo de forma aleatória antes do treinamento.
-3. **Célula 3 - Infraestrutura:** Configuração da fábrica de vetores em memória RAM e da função de avaliação.
-4. **Célula 4 - Treinamento:** Execução assíncrona do DQN, PPO e A2C controlada por barras de progresso `tqdm`.
-5. **Célula 5 - Quadro de Estresse:** Geração automática do gráfico científico de convergência e do ranking do Pandas.
-6. **Célula 6 - O "Depois":** Demonstração visual estabilizada e inline do modelo campeão realizando o pouso autônomo.
-7. **Célula 7 - Diagnóstico:** Auditoria fina de bits de entropia de Shannon e análise preditiva de escalabilidade.
+1. **Cell 1 - Setup:** Library initialization and hardware mapping.
+2. **Cell 2 - The "Before":** Inline demonstration of the spacecraft crashing randomly prior to training.
+3. **Cell 3 - Infrastructure:** Configuring the in-memory vector factory (RAM) and the evaluation function.
+4. **Cell 4 - Training:** Asynchronous execution of DQN, PPO, and A2C managed by `tqdm` progress bars.
+5. **Cell 5 - Stress Board:** Automated generation of the scientific convergence graph and Pandas ranking.
+6. **Cell 6 - The "After":** Inline, stabilized visual demonstration of the champion model performing an autonomous landing.
+7. **Cell 7 - Diagnostics:** Fine-grained auditing of Shannon entropy bits and predictive scalability analysis.
 
 ---
 
-## ⚖️ Licença
+## ⚖️ License
 
-Este repositório está sob a licença **MIT**. Sinta-se livre para clonar, estudar, modificar e distribuir o código para fins educacionais ou de portfólio.
+This repository is licensed under the **MIT License**. Feel free to clone, study, modify, and distribute the code for educational or portfolio purposes.
