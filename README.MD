@@ -31,6 +31,7 @@ Following a controlled budget of **300,000 interaction timesteps** under indepen
 <p align="center">
   <video src="assets/lunar_lander.mp4" width="700" controls></video>
 </p>
+
 ---
 
 ## 🛡️ Project 2: Unsupervised Cyber Threat Intelligence Pipeline

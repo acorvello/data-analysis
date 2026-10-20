@@ -9,6 +9,7 @@ __pycache__/
 .pygame_window_cache/
 
 # Arquivos temporários e checkpoints do Jupyter Notebook
+!assets/lunar_lander.mp4
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 *.ipynb_checkpoints
