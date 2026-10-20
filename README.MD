@@ -1,9 +1,9 @@
 # 🤖 Advanced Artificial Intelligence Portfolio
-### Production-Grade Pipelines: Deep Reinforcement Learning & Unsupervised Threat Intelligence
+### Production-Grade Pipelines: Deep Reinforcement Learning, Cyber Threat Intelligence & Biomedical Vision
 
-This repository hosts a dual-demonstration portfolio showcasing practical engineering, structural auditing, and high-impact mathematical visual optimization applied to advanced Artificial Intelligence domains. 
+This repository hosts a multi-demonstration portfolio showcasing practical engineering, structural auditing, hardware optimizations, and high-impact mathematical visual analytics applied to advanced Artificial Intelligence domains. 
 
-Both pipelines are deployed via fully reproducible Jupyter Notebooks structured with clean, production-grade code, interactive tracking dashboards, and detailed scientific telemetry.
+All pipelines are deployed via fully reproducible Jupyter Notebooks structured with clean, production-grade code, interactive tracking dashboards, and detailed scientific telemetry.
 
 ---
 
@@ -53,6 +53,29 @@ The models are automatically ranked based on intrinsic structural validation met
 
 ---
 
+## 🧬 Project 3: Biomedical Semantic Segmentation Pipeline (Knee Radiographs)
+
+This phase presents an end-to-end medical computer vision ecosystem designed for the automated boundary extraction and area tracking of the joint space in knee radiographs using the **Digital Knee X-ray** dataset. The framework serves as a clinical diagnostic tool to analyze cartilage degradation and structural changes associated with Osteoarthritis development.
+
+### 💡 Technical Highlights of the Biomedical Pipeline
+* **Topological Skip-Fusions (U-Net Net):** Evolves the computational graph from standard Fully Convolutional Networks (FCNs) into a symmetrical U-Net architecture. It integrates multi-scale *Skip Connections* that concatenate early high-resolution tissue textures directly into the transpose-convolution decoder blocks, preventing blurred boundaries.
+* **Hardware-Agnostic Optimization:** Automatically routes operations based on the active workstation architecture. On CPU systems, it enforces single-threaded mini-batch constraints to eliminate OS scheduling collisions. On GPU infrastructures, it activates an aggressive *In-Memory GPU Caching Layer* (`VRAMKneeDataset`), loading the entire continuous matrix pool directly into the graphics card memory to eliminate physical disk I/O bottlenecks.
+* **Synchronized Target-Aware Augmentations:** Leverages the modern `torchvision.transforms.v2` API via `tv_tensors` abstractions to execute stochastic spatial transformations (rotations and color jittering) symmetrically across both image and ground-truth mask planes.
+* **Hybrid Biomedical Loss Objectives:** Combines Binary Cross-Entropy with Logits and Dice Loss (`BCEDiceLoss`) under an `AdamW` optimizer (Weight Decay = $10^{-4}$) to smooth backpropagation convergence graphs and eliminate pixel distribution biases caused by background-dominant fields.
+* **In-Memory Checkpoint Layer:** Captures the highest-scoring model parameters during tracking loops via RAM-based deep copies (`copy.deepcopy`), mitigating physical write latencies and keeping the Git repository clean from binary `.pth` clutter.
+
+### 📊 Quantitative Testing Performance Telemetry
+Following training convergence monitored over a stratified clinical partition (70% Train, 15% Val, 15% Test mapping exact *Kellgren-Lawrence* severity allocations), the network yielded the following performance metrics on unseen data:
+
+| Segmentation Metric | Empirical Test Score | Clinical Interpretation & Evaluation |
+| :--- | :---: | :--- |
+| 🎯 **Mean Intersection over Union (mIoU)** | **0.9569 (95.7%)** | High-fidelity localization. Strict penalty handling successfully suppressed false alarms and boundary blur. |
+| 🧬 **Mean Dice Coefficient (F1-Score)** | **0.9772 (97.7%)** | Near-perfect spatial agreement between AI predictions and physician-annotated ground truths. |
+
+* **Clinical Dashboard Overlay Diagnostics:** The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic `bone` colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 **True Positives** (Correct IA detection), 🔴 **False Negatives** (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 **False Positives** (Spurious artifact classification noise).
+
+---
+
 ## 🛠️ Requirements and Installation
 
 The entire workspace exclusively utilizes open-source packages (MIT License). Ensure you have Python 3.10+ installed. Clone the repository and install the unified dependencies:
@@ -64,8 +87,8 @@ pip install -r requirements.txt
 ### Core Dependency Packages:
 * `gymnasium[box2d]`, `stable-baselines3`, `pygame` (Reinforcement Learning engine and Continuous physics simulation)
 * `scikit-learn`, `scipy`, `mlxtend` (Clustering, Preprocessing, Feature Selection, and Association Rule Mining)
-* `torch` (Tensor acceleration engine / Deep learning back-end processing)
-* `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly` (Data wrangling, conditional styling, and interactive plotting dashboards)
+* `torch`, `torchvision` (Tensor acceleration engine / Deep learning back-end / Target-aware vision tensors)
+* `opencv-python`, `pandas`, `numpy`, `matplotlib`, `seaborn` (Advanced array calculations, binary file parsing, and interactive clinical visualization dashboards)
 
 ---
 
@@ -74,16 +97,3 @@ pip install -r requirements.txt
 ### 1. `lunar_lander_deep_rl.ipynb` (Continuous Control Stack)
 * **Cells 1 to 3:** Setup, baseline random-agent telemetry collection, and in-memory vector RAM factory configuration.
 * **Cell 4:** Concurrent algorithm training (DQN, PPO, A2C) backed by interactive progress status logs.
-* **Cells 5 to 7:** Automated performance graphing, champion landing video rendering, and fine-grained Shannon Entropy analytics.
-
-### 2. `unsupervised_threat_intelligence.ipynb` (Cyber Security Stack)
-* **Cells 1 to 4:** Hardware engine check, behavioral aggregation, feature cleaning, and standardized Z-Score scaling.
-* **Cells 5 to 8:** K-Means optimization (Elbow vs. Silhouette plots), Dendrogram building, DBSCAN noise isolation, and styled data metrics.
-* **Cells 9 to 10:** Interactive 2D PCA (Factor Loadings) and Non-Linear t-SNE manifold cluster visualizations.
-* **Cells 11 to 13:** Rule Mining exploration (Apriori vs. FP-Growth), and final Operational Centroid Dashboard profile mapping.
-
----
-
-## ⚖️ License
-
-This repository is licensed under the **MIT License**. Feel free to clone, branch, study, modify, and distribute the code for academic, personal portfolio, or corporate demonstration purposes.
