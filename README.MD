@@ -29,7 +29,7 @@ Following a controlled budget of **300,000 interaction timesteps** under indepen
 * **Champion Firing Profile (PPO):** Idle/Drifting (25.5%), Left Lateral Thruster (17.6%), Right Lateral Thruster (17.3%), Main Vertical Braking Thruster (39.7%).
 ---
 <p align="center">
-  <video src="datasets/assets/lunar_lander.mp4" width="700" controls></video>
+  <video src="assets/lunar_lander.mp4" width="700" controls></video>
 </p>
 ---
 
@@ -79,6 +79,7 @@ Following training convergence monitored over a stratified clinical partition (7
 * **Clinical Dashboard Overlay Diagnostics:** The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic `bone` colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 **True Positives** (Correct IA detection), 🔴 **False Negatives** (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 **False Positives** (Spurious artifact classification noise).
 ---
 ![AI Diagnostics Panel](assets/knee_train.jpg)
+---
 ![AI Diagnostics Panel](assets/knee_status.jpg)
 ---
 
