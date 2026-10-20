@@ -28,6 +28,8 @@ Following a controlled budget of **300,000 interaction timesteps** under indepen
 
 * **Champion Firing Profile (PPO):** Idle/Drifting (25.5%), Left Lateral Thruster (17.6%), Right Lateral Thruster (17.3%), Main Vertical Braking Thruster (39.7%).
 
+![Lunar Lander Demo](assets/lunar_lander.mp4)
+
 ---
 
 ## 🛡️ Project 2: Unsupervised Cyber Threat Intelligence Pipeline
@@ -50,6 +52,7 @@ The models are automatically ranked based on intrinsic structural validation met
 | **DBSCAN (eps=0.5)** | 1 | *NaN (Continuous)* | *NaN (Continuous)* | *NaN (Continuous)* | Surgically isolates anomalies as standalone **Noise (-1)** |
 
 * **Discovered Threat Signatures (Apriori & FP-Growth):** Both association mining algorithms extract identical network signatures with a **Lift Factor > 7.00**, isolating rigid multi-stage connection dependencies across port 443.
+![Structural Results Summary](assets/mosaico.jpg)
 
 ---
 
@@ -73,7 +76,8 @@ Following training convergence monitored over a stratified clinical partition (7
 | 🧬 **Mean Dice Coefficient (F1-Score)** | **0.9772 (97.7%)** | Near-perfect spatial agreement between AI predictions and physician-annotated ground truths. |
 
 * **Clinical Dashboard Overlay Diagnostics:** The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic `bone` colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 **True Positives** (Correct IA detection), 🔴 **False Negatives** (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 **False Positives** (Spurious artifact classification noise).
-
+![AI Diagnostics Panel](assets/knee_train.png)
+![AI Diagnostics Panel](assets/knee_status.png)
 ---
 
 ## 🛠️ Requirements and Installation
