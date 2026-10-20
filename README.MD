@@ -28,7 +28,7 @@ Following a controlled budget of **300,000 interaction timesteps** under indepen
 
 * **Champion Firing Profile (PPO):** Idle/Drifting (25.5%), Left Lateral Thruster (17.6%), Right Lateral Thruster (17.3%), Main Vertical Braking Thruster (39.7%).
 ---
-![Lunar Lander Continuous Control Stack](assets/lunar_lander.gif)
+![Lunar Lander Continuous Control Stack](assets/lander.gif)
 ---
 
 ## 🛡️ Project 2: Unsupervised Cyber Threat Intelligence Pipeline
