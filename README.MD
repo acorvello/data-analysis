@@ -1,11 +1,6 @@
 # 🤖 Advanced Artificial Intelligence & Data Engineering Portfolio
 
-<div align="left">
-  <img src="https://shields.io" alt="Python" />
-  <img src="https://shields.io" alt="PyTorch" />
-  <img src="https://shields.io" alt="scikit-learn" />
-  <img src="https://shields.io" alt="OpenCV" />
-</div>
+![Python](https://shields.io) ![PyTorch](https://shields.io) ![scikit-learn](https://shields.io) ![OpenCV](https://shields.io)
 
 ### Production-Grade Pipelines: Deep Reinforcement Learning, Cyber Threat Intelligence & Biomedical Vision
 
