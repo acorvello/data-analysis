@@ -99,9 +99,9 @@ Following training convergence monitored over a stratified clinical partition (7
 
 • Clinical Dashboard Overlay Diagnostics: The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic bone colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 
 
-🟢 True Positives (Correct IA detection) 
-🔴 False Negatives (Missed targets common in Grade 4 cases due to total joint space collapse)
-🔵 False Positives (Spurious artifact classification noise)
+* ** 🟢 True Positives (Correct IA detection) 
+* ** 🔴 False Negatives (Missed targets common in Grade 4 cases due to total joint space collapse)
+* ** 🔵 False Positives (Spurious artifact classification noise)
 
 ---
 ![AI Diagnostics Panel](assets/knee_train.jpg)
