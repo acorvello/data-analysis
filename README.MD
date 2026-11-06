@@ -1,9 +1,26 @@
 # 🤖 Advanced Artificial Intelligence & Data Engineering Portfolio
+
+<div align="left">
+  <img src="https://shields.io" alt="Python" />
+  <img src="https://shields.io" alt="PyTorch" />
+  <img src="https://shields.io" alt="scikit-learn" />
+  <img src="https://shields.io" alt="OpenCV" />
+</div>
+
 ### Production-Grade Pipelines: Deep Reinforcement Learning, Cyber Threat Intelligence & Biomedical Vision
 
 This repository hosts a multi-demonstration portfolio showcasing practical data engineering, structural auditing, hardware optimizations, and high-impact mathematical visual analytics applied to advanced Artificial Intelligence domains. 
 
 All pipelines are deployed via fully reproducible Jupyter Notebooks structured with clean, production-grade code, interactive tracking dashboards, and detailed scientific telemetry.
+
+---
+
+## 🗺️ Quick Project Navigation
+
+*   [**Project 1: Lunar Lander v3 (Deep RL)**](#-project-1-lunar-lander-v3--deep-reinforcement-learning-benchmark) — Continuous physical spacecraft simulation.
+*   [**Project 2: Cyber Threat Intelligence**](#-project-2-unsupervised-cyber-threat-intelligence--data-qa-pipeline) — Unsupervised behavioral aggregation & clustering pipeline.
+*   [**Project 3: Biomedical Vision Segmentation**](#-project-3-biomedical-semantic-segmentation--data-validation-pipeline) — U-Net topology with hardware-agnostic optimizations.
+*   [**Installation & Execution**](#%EF%B8%8F-requirements-and-installation) — Production readiness deployment instructions.
 
 ---
 
@@ -27,8 +44,12 @@ Following a controlled budget of **300,000 interaction timesteps** under indepen
 | 🥉 **DQN** | -125.40 | 45.10 | 0.0% | 0.32 bits | 🚨 Collapse Alert |
 
 * **Champion Firing Profile (PPO):** Idle/Drifting (25.5%), Left Lateral Thruster (17.6%), Right Lateral Thruster (17.3%), Main Vertical Braking Thruster (39.7%).
+
 ---
-![Lunar Lander Continuous Control Stack](assets/lander.gif)
+<div align="center">
+  <img src="assets/lander.gif" alt="Lunar Lander Continuous Control Stack" width="80%" />
+</div>
+
 ---
 
 ## 🛡️ Project 2: Unsupervised Cyber Threat Intelligence & Data QA Pipeline
@@ -51,8 +72,12 @@ The models are automatically ranked based on intrinsic structural validation met
 | 🥉 **DBSCAN (eps=0.5)** | 1 | *nan* | *nan* | *nan* | 0.00204 | Surgically isolates anomalies as standalone **Noise (-1)** |
 
 * **Discovered Threat Signatures (Apriori & FP-Growth):** Both association mining algorithms extract identical network signatures with a **Lift Factor > 7.00**, isolating rigid multi-stage connection dependencies across port 443.
+
 ---
-![Structural Results Summary](assets/mosaico.jpg)
+<div align="center">
+  <img src="assets/mosaico.jpg" alt="Structural Results Summary" width="80%" />
+</div>
+
 ---
 
 ## 🧬 Project 3: Biomedical Semantic Segmentation & Data Validation Pipeline
@@ -60,7 +85,7 @@ The models are automatically ranked based on intrinsic structural validation met
 This phase presents an end-to-end medical computer vision ecosystem designed for the automated boundary extraction and area tracking of the joint space in knee radiographs using the **Digital Knee X-ray** dataset. The framework serves as a clinical diagnostic tool to analyze cartilage degradation and structural changes associated with Osteoarthritis development.
 
 ### 💡 Technical Highlights of the Biomedical Pipeline
-* **Topological Skip-Fusions (U-Net Net):** Evolves the computational graph from standard Fully Convolutional Networks (FCNs) into a symmetrical U-Net architecture. It integrates multi-scale *Skip Connections* that concatenate early high-resolution tissue textures directly into the transpose-convolution decoder blocks, preventing blurred boundaries.
+* **Topological Skip-Fusions (U-Net):** Evolves the computational graph from standard Fully Convolutional Networks (FCNs) into a symmetrical U-Net architecture. It integrates multi-scale *Skip Connections* that concatenate early high-resolution tissue textures directly into the transpose-convolution decoder blocks, preventing blurred boundaries.
 * **Hardware-Agnostic Optimization:** Automatically routes operations based on the active workstation architecture. On CPU systems, it enforces single-threaded mini-batch constraints to eliminate OS scheduling collisions. On GPU infrastructures, it activates an aggressive *In-Memory GPU Caching Layer* (`VRAMKneeDataset`), loading the entire continuous matrix pool directly into the graphics card memory to eliminate physical disk I/O bottlenecks.
 * **Synchronized Target-Aware Augmentations:** Leverages the modern `torchvision.transforms.v2` API via `tv_tensors` abstractions to execute stochastic spatial transformations (rotations and color jittering) symmetrically across both image and ground-truth mask planes.
 * **Data Drift & Consistency Management:** Monitors input data distributions to detect distribution drift between training cohorts and clinical test sets, smoothing backpropagation convergence graphs using an `AdamW` optimizer (Weight Decay = 10⁻⁴).
@@ -71,26 +96,43 @@ Following training convergence monitored over a stratified clinical partition (7
 
 | Segmentation Metric | Empirical Test Score | Clinical Interpretation & Evaluation |
 | :--- | :---: | :--- |
-| 🎯 **Mean Intersection over Union (mIoU)** | **0.9569 (95.7%)** | High-fidelity localization. Strict penalty handling successfully suppressed false alarms and boundary blur. |
+| 🎯 **Mean Intersection over Union (mIoU)** | **0.9569 (95.7%)** | High-fidelity localization. Strict penalty handling suppressed false alarms and boundary blur. |
 | 🧬 **Mean Dice Coefficient (F1-Score)** | **0.9772 (97.7%)** | Near-perfect spatial agreement between AI predictions and physician-annotated ground truths. |
 
-* **Clinical Dashboard Overlay Diagnostics:** The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic `bone` colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 **True Positives** (Correct IA detection), 🔴 **False Negatives** (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 **False Positives** (Spurious artifact classification noise).
----
-![AI Diagnostics Panel](assets/knee_train.jpg)
----
-![AI Diagnostics Panel](assets/knee_status.jpg)
----
+• Clinical Dashboard Overlay Diagnostics: The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic bone colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 True Positives (Correct IA detection), 🔴 False Negatives (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 False Positives (Spurious artifact classification noise).
 
-## 🛠️ Requirements and Installation
+🛠️ Requirements and Installation
 
-The entire workspace exclusively utilizes open-source packages (MIT License). Ensure you have Python 3.10+ installed. Clone the repository and install the unified dependencies:
+The entire workspace exclusively utilizes open-source packages (MIT License). Follow these instructions to set up your isolated development workspace.
 
+1. Environment Deployment
+
+Ensure you have Python 3.10+ installed on your system.
 ```bash
+
+Clone the repository
+
+git clone https://github.com/acorvello/data-analysis.git
+cd data-analysis
+
+Create and activate a pristine Python virtual environment
+
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+Upgrade pip core architecture
+
+pip install --upgrade pip
+
+Install unified deterministic dependencies
+
 pip install -r requirements.txt
 ```
 
-### Core Dependency Packages:
-* `gymnasium[box2d]`, `stable-baselines3`, `pygame` (Reinforcement Learning engine and Continuous physics simulation)
-* `scikit-learn`, `scipy`, `mlxtend` (Clustering, Preprocessing, Feature Selection, and Association Rule Mining)
-* `torch`, `torchvision` (Tensor acceleration engine / Deep learning back-end / Target-aware vision tensors)
-* `opencv-python`, `pandas`, `numpy`, `matplotlib`, `seaborn` (Advanced array calculations, binary file parsing, and interactive clinical visualization dashboards)
+📦 Core Dependency Packages
+
+The architecture is built upon the following production backbones:
+• Reinforcement Learning: gymnasium[box2d], stable-baselines3, pygame (Continuous physics simulations).
+• Statistical Data Mining: scikit-learn, scipy, mlxtend (Advanced clustering, VIF feature pruning, association analytics).
+• Deep Learning & Vision: torch, torchvision (Tensor back-end optimization, dynamic image skip-concatenations).
+• Data Engineering & Panels: opencv-python, pandas, numpy, matplotlib, seaborn (High-speed array streaming, binary parsing, and clinical overlays).
