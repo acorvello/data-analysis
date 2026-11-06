@@ -97,7 +97,11 @@ Following training convergence monitored over a stratified clinical partition (7
 | 🎯 **Mean Intersection over Union (mIoU)** | **0.9569 (95.7%)** | High-fidelity localization. Strict penalty handling suppressed false alarms and boundary blur. |
 | 🧬 **Mean Dice Coefficient (F1-Score)** | **0.9772 (97.7%)** | Near-perfect spatial agreement between AI predictions and physician-annotated ground truths. |
 
-• Clinical Dashboard Overlay Diagnostics: The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic bone colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 🟢 True Positives (Correct IA detection), 🔴 False Negatives (Missed targets common in Grade 4 cases due to total joint space collapse), and 🔵 False Positives (Spurious artifact classification noise).
+• Clinical Dashboard Overlay Diagnostics: The visualization engine applies dark high-contrast themes styled after professional hospital software, utilizing a realistic bone colormap. It isolates a tri-color spatial evaluation mask overlay mapping: 
+
+🟢 True Positives (Correct IA detection) 
+🔴 False Negatives (Missed targets common in Grade 4 cases due to total joint space collapse)
+🔵 False Positives (Spurious artifact classification noise)
 
 ---
 ![AI Diagnostics Panel](assets/knee_train.jpg)
