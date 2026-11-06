@@ -1,9 +1,9 @@
 # 🤖 Advanced Artificial Intelligence & Data Engineering Portfolio
 
-![Python](badge/Python?style=flat&logo=python&logoColor=white&color=3670A0)
-![PyTorch](badge/PyTorch?style=flat&logo=pytorch&logoColor=white&color=EE4C2C)
-![scikit-learn](badge/scikit-learn?style=flat&logo=scikit-learn&logoColor=white&color=F7931E)
-![OpenCV](badge/OpenCV?style=flat&logo=opencv&logoColor=white&color=3670A0)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-3670A0?style=flat&logo=opencv&logoColor=white)
 
 ### Production-Grade Pipelines: Deep Reinforcement Learning, Cyber Threat Intelligence & Biomedical Vision
 
